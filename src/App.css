@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #eaeded;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #131921;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff9900;
+  cursor: pointer;
+}
+
+.logo:hover,
+.location:hover,
+.nav-item:hover,
+.cart:hover {
+  color: #f3a847;
+  transition: 0.3s;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  height: 42px;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  max-width: 700px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  background: white;
+  cursor: text;
+  caret-color: white;
+  cursor: text;
+}
+
+.search-box button {
+  width: 55px;
+  border: none;
+  background: #febd69;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.search-box button:hover {
+  background: #f3a847;
+}
+.search-box:hover {
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.4);
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cart {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cart span {
+  background: orange;
+  color: black;
+  padding: 2px 8px;
+  border-radius: 50%;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+/* HERO SLIDER */
+
+.hero-slider {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.hero-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* WELCOME SECTION */
+
+.banner {
+  background: white;
+  text-align: center;
+  padding: 35px;
+  margin-bottom: 35px;
+}
+
+.banner h1 {
+  color: #131921;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  color: #555;
+  margin-top: 35px; 
+  font-size: 18px;
+}
+
+/* MAIN LAYOUT */
+
+.main-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 220px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar li:hover {
+  color: orange;
+}
+
+/* PRODUCTS */
+
+.products {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 12px 0;
+  min-height: 50px;
+}
+
+.rating {
+  color: orange;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.price {
+  color: #b12704;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+.card button:first-of-type {
+  margin-top: auto;
+  background: #ffd814;
+}
+
+.card button:first-of-type:hover {
+  background: #f7ca00;
+}
+
+.remove-btn {
+  background: #ff4d4d !important;
+  color: white;
+}
+
+.remove-btn:hover {
+  background: #e60000 !important;
+}
+
+/* FOOTER */
+
+footer {
+  background: #232f3e;
+  color: white;
+  padding: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-links a:hover {
+  color: orange;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .main-section {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-slider {
+    height: 180px;
+  }
+}
